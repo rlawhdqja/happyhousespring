@@ -23,7 +23,7 @@
     <div class="text-right">
         <c:if test="${empty userinfo}">
         	
-            <form method="post" action="${root}/login">
+            <form method="post" action="${root}/user/login">
                 <div class="form-group">
                     <input type="text" name="id" placeholder="아이디" value="ssafy">
                     <input type="password" name="pass" placeholder="비밀번호" value="1234">
@@ -34,7 +34,7 @@
         <c:if test="${not empty userinfo}">
             <div>
                 ${userinfo.name}님 반갑습니다.
-                <a href="${root}/logout">로그아웃</a>
+                <a href="${root}/user/logout">로그아웃</a>
             </div>
         </c:if>
     </div>

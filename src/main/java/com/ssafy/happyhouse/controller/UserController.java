@@ -47,7 +47,7 @@ public class UserController {
 	public String register(User user, Model model) throws Exception {
 		logger.debug("user info : {}", user);
 		userService.insert(user);
-		return "redirect:/regist";
+		return "list";
 	}
 	@PostMapping("/login")
 	public String login(User user, HttpSession session, Model m) throws SQLException {
@@ -60,7 +60,11 @@ public class UserController {
 			return "index";			
 		}
 	}
-	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/";
+	}
 	@GetMapping("/list")
 	public String list(SearchCondition condition, Model m) {
 		//List<Book> books = bService.search(condition);

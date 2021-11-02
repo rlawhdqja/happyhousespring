@@ -14,7 +14,7 @@ textarea {
 </style>
 <div class="container">
     <h1>회원 등록</h1>
-    <form method="post" action="${root}/regist" enctype="multipart/form-data">
+    <form method="post" action="${root}/regist">
         <!-- front-controller pattern에서 요청을 구분하기 위한 parameter -->
         <div class="form-group">
             <label for="isbn">아이디</label>
@@ -48,7 +48,7 @@ textarea {
         </div>
     </form>
     <br>
-    <a href="${root}/list">도서 목록</a>
+    <a href="${root}/list">회원 목록</a>
 </div>
 </body>
 </html>

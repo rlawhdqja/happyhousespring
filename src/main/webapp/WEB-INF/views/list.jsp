@@ -18,7 +18,7 @@
     </table>
     <br>
     <%@ include file="/WEB-INF/views/include/paging.jsp" %>
-    <a href="${root}/regist">회원 등록</a>
+    <a href="${root}/user/regist">회원 등록</a>
 </div>
 </body>
 </html>
