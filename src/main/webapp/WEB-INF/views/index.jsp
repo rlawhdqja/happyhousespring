@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="root" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>index page</h3>
+<a href="${root}/aptlist">index page</a>
 </body>
 </html>

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy
-@MapperScan(basePackages = "com.ssafy.happyhouse.model.repo")
+@MapperScan(basePackages = "com.ssafy.happyhouse.model.mapper")
 public class HappyHouseSpringApplication {
 
 	public static void main(String[] args) {
