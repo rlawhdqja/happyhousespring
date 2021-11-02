@@ -52,8 +52,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> search(SearchCondition condition) {
-		return null;
+	public List<User> search() throws SQLException{
+		return mapper.search();
 	}
 
 	@Override

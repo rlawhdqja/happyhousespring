@@ -60,10 +60,8 @@ public class UserController {
 	
 	@PostMapping("/update")
 	public String update(User user, Model model) throws Exception {
-		logger.debug("user info : {}", user);
 		userService.update(user);
-		return "redirect:/";
-		
+		return "redirect:/";	
 	}
 	
 	

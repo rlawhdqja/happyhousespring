@@ -27,11 +27,11 @@ textarea {
 </style>
 <div class="container">
     <h1>회원 정보 수정</h1>
-    <form id="userform" method="post" action="${root}/user/regist">
+    <form id="userform" method="post" action="${root}/user/update">
         <!-- front-controller pattern에서 요청을 구분하기 위한 parameter -->
         <div class="form-group">
             <label for="id">아이디</label>
-            <input type="text" id="name" name="name" class="form-control-sm" value="${userinfo.id}" readonly>
+            <input type="text" id="id" name="id" class="form-control-sm" value="${userinfo.id}" readonly>
         </div>
         <div class="form-group">
             <label for="name">이름</label>

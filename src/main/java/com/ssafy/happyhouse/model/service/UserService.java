@@ -13,6 +13,6 @@ public interface UserService {
 	//List<User> search() throws SQLException;
 	int delete(String id) throws SQLException;
 	int update(User u) throws SQLException;
-	List<User> search(SearchCondition condition);
+	List<User> search() throws SQLException;
 	Map<String, Object> pagingSearch(SearchCondition condition);
 }
