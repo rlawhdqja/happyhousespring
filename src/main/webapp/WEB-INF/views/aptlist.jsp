@@ -94,8 +94,7 @@
 				let colorArr = ['table-primary','table-success','table-danger'];
 				$(document).ready(function(){
 					$.get("${root}/map/sido"
-						,function(data, status){
-							alert( "success" );
+						,function(data, status){							
 							$.each(data, function(index, vo) {
 								$("#sido").append("<option value='"+vo.sidoCode+"'>"+vo.sidoName+"</option>");
 							});
@@ -133,6 +132,7 @@
 					$.get("${root}/map/apt"
 							,{dong: $("#dong").val()}
 							,function(data, status){
+								console.log(data);
 								$("tbody").empty();
 								$.each(data, function(index, vo) {
 									let str = `
