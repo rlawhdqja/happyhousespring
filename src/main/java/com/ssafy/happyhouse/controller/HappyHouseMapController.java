@@ -15,11 +15,7 @@ import com.ssafy.happyhouse.model.SidoGugunCodeDto;
 import com.ssafy.happyhouse.model.service.HappyHouseMapService;
 
 @RestController
-<<<<<<< HEAD
-@RequestMapping("/aptlist")
-=======
 @RequestMapping("/map")
->>>>>>> branch 'master' of https://lab.ssafy.com/rlawhd011/happyhousespring.git
 public class HappyHouseMapController {
 	
 	@Autowired
