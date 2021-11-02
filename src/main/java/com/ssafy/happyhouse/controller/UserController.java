@@ -47,9 +47,6 @@ public class UserController {
 		userService.insert(user);
 		return "redirect:/";
 
-
-
-
 	}
 	
 	@PostMapping("/login")
@@ -70,4 +67,14 @@ public class UserController {
 		return "redirect:/";  
 	}
 
+	@GetMapping("/list")//list.jsp에서 doget으로 요청했기때문에 이렇게 받는다.
+	public String list(SearchCondition condition, Model m) {
+		//List<Book> books = bService.search(condition);
+        //m.addAttribute("books", books);
+		
+		Map<String, Object> map = userService.pagingSearch(condition);
+		m.addAttribute("users", map.get("users"));
+		m.addAttribute("navigation", map.get("navigation"));
+		return "list";
+	}
 }
