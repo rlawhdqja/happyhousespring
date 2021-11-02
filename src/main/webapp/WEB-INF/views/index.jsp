@@ -11,6 +11,7 @@
 		<a href="${root}/aptlist">아파트 실거래가</a><br>
 		<a href="${root}/user/update">회원정보 수정</a><br>
 		<a href="${root}/user/delt?id=${userinfo.id}">회원 탈퇴</a>
+		<a href="${root}/list">회원 목록</a></li>
 	</c:if>
 	</ul>
 </div>	

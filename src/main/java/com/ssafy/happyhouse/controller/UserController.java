@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import org.springframework.web.servlet.ModelAndView;
+
+
+
 import com.ssafy.happyhouse.model.SearchCondition;
 import com.ssafy.happyhouse.model.User;
 import com.ssafy.happyhouse.model.service.UserService;
@@ -38,7 +42,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/regist")
-	public String register() {
+	public String regist() {
 		return "regist";
 	}
 	@GetMapping("/delt")
@@ -55,6 +59,10 @@ public class UserController {
 		return "redirect:/";
 
 	}
+	
+	
+
+	
 	
 	@PostMapping("/login")
 	public String login(User user, HttpSession session, Model m) throws SQLException {
@@ -74,4 +82,14 @@ public class UserController {
 		return "redirect:/";  
 	}
 
+	@GetMapping("/list")//list.jsp에서 doget으로 요청했기때문에 이렇게 받는다.
+	public String list(SearchCondition condition, Model m) {
+		//List<Book> books = bService.search(condition);
+        //m.addAttribute("books", books);
+		
+		Map<String, Object> map = userService.pagingSearch(condition);
+		m.addAttribute("users", map.get("users"));
+		m.addAttribute("navigation", map.get("navigation"));
+		return "list";
+	}
 }

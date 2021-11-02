@@ -14,7 +14,6 @@ $("#registerBtn").click(function () {
         alert("비밀번호 입력!!!");
         return;
     } else {
-    	$("#email").val($("#emailid").val() + "@" + $("#emaildomain").val());
         $("#userform").attr("action", "${root}/user/regist").submit();
     }
 });
@@ -32,7 +31,6 @@ textarea {
 <div class="container">
     <h1>회원 등록</h1>
     <form id="userform" method="post" action="${root}/user/regist">
-    <input type="hidden" id="email" name="email">
         <!-- front-controller pattern에서 요청을 구분하기 위한 parameter -->
         <div class="form-group">
             <label for="id">아이디</label>
@@ -48,6 +46,9 @@ textarea {
         </div>
         <div class="form-group">
             <label for="email">이메일</label>
+
+            <input type="text" id="email" name = "email" class="custom-control-inline">
+
             <div type="text"  class="custom-control-inline">
 	            <input id="emailid" name="emailid" class="form-control-sm" value="ssafy" size="25">@
 	            <select class="form-control" id="emaildomain" name="emaildomain">
@@ -57,9 +58,10 @@ textarea {
 	                   <option value="google.com">구글</option>
 	           </select>
            	</div>
+
         </div>
  
-</div>
+	</div>
         <div class="form-group">
             <input type="submit" id="registerBtn" value="등록">
             <input type="reset" value="취소">
