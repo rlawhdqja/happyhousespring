@@ -48,7 +48,10 @@ public class UserController {
 		return "redirect:/";
 
 
+
+
 	}
+	
 	@PostMapping("/login")
 	public String login(User user, HttpSession session, Model m) throws SQLException {
 		User selected = userService.select(user.getId());
@@ -60,6 +63,7 @@ public class UserController {
 			return "index";			
 		}
 	}
+	
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
