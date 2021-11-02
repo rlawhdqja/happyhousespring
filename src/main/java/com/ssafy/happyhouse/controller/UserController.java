@@ -43,7 +43,7 @@ public class UserController {
 	public String register(User user, Model model) throws Exception {
 		logger.debug("user info : {}", user);
 		userService.insert(user);
-		return "redirect:/";
+		return "redirect:/regist";
 	}
 	@PostMapping("/login")
 	public String login(User user, HttpSession session, Model m) throws SQLException {
@@ -63,7 +63,7 @@ public class UserController {
         //m.addAttribute("books", books);
 		
 		Map<String, Object> map = userService.pagingSearch(condition);
-		m.addAttribute("books", map.get("books"));
+		m.addAttribute("users", map.get("users"));
 		m.addAttribute("navigation", map.get("navigation"));
 		return "list";
 	}
