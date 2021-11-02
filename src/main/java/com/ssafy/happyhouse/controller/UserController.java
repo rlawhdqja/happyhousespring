@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ssafy.happyhouse.model.SearchCondition;
 import com.ssafy.happyhouse.model.User;
@@ -40,15 +41,18 @@ public class UserController {
 	public String register() {
 		return "regist";
 	}
+	@GetMapping("/delt")
+	public String delt(String id, HttpSession session) throws SQLException {
+		session.invalidate();
+		userService.delete(id);
+		return "redirect:/";
+	}
 	
 	@PostMapping("/regist")
 	public String register(User user, Model model) throws Exception {
 		logger.debug("user info : {}", user);
 		userService.insert(user);
 		return "redirect:/";
-
-
-
 
 	}
 	

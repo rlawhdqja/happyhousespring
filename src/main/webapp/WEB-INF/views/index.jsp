@@ -8,7 +8,9 @@
 		<a href="${root}/user/regist">회원가입</a><br>
 	</c:if>
 	<c:if test="${!empty userinfo}">
-		<a href="${root}/aptlist">아파트 실거래가</a>
+		<a href="${root}/aptlist">아파트 실거래가</a><br>
+		<a href="${root}/user/update">회원정보 수정</a><br>
+		<a href="${root}/user/delt?id=${userinfo.id}">회원 탈퇴</a>
 	</c:if>
 	</ul>
 </div>	
