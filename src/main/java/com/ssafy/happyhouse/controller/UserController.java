@@ -63,7 +63,7 @@ public class UserController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:/";
+		return "redirect:/";  
 	}
 	@GetMapping("/list")
 	public String list(SearchCondition condition, Model m) {
