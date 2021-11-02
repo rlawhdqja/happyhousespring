@@ -2,8 +2,20 @@
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
 
 
-<a href="${root}/aptlist">apt list</a><br>
-<a href="${root}/user/regist">회원가입</a><br>
-<a href="${root}/main">유저 REST</a>
+<p>
+<div class="container">
+	<ul>
+	<c:if test="${empty userinfo}">
+		<a href="${root}/user/regist">회원가입</a><br>
+		<a href="${root}/main">유저 REST</a>
+	</c:if>
+	<c:if test="${!empty userinfo}">
+		<a href="${root}/aptlist">아파트 실거래가</a><br>
+		<a href="${root}/list">회원 목록</a></li><br>
+		<a href="${root}/main">유저 REST</a>
+	</c:if>
+	</ul>
+</div>	
+
 </body>
 </html>
