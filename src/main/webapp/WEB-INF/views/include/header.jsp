@@ -22,7 +22,7 @@
     <br>
     <div class="text-right">
         <c:if test="${empty userinfo}">
-        	<a href="${root}/user/regist">회원가입</a>
+        	
             <form method="post" action="${root}/login">
                 <div class="form-group">
                     <input type="text" name="id" placeholder="아이디" value="ssafy">

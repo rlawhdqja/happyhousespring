@@ -13,40 +13,35 @@ textarea {
 }
 </style>
 <div class="container">
-    <h1>도서 등록</h1>
+    <h1>회원 등록</h1>
     <form method="post" action="${root}/regist" enctype="multipart/form-data">
         <!-- front-controller pattern에서 요청을 구분하기 위한 parameter -->
         <div class="form-group">
-            <label for="isbn">도서번호</label>
-            <input type="text" id="isbn" name="isbn" class="form-control-sm" value="111-222-3333">
+            <label for="isbn">아이디</label>
+            <input type="text" id="id" name="id" class="form-control-sm" value="이싸피">
         </div>
         <div class="form-group">
-            <label for="title">도서명</label>
-            <input type="text" id="title" name="title" class="form-control-sm" value="자바프로그래밍">
+            <label for="title">이름</label>
+            <input type="text" id="name" name="name" class="form-control-sm" value="이싸피">
         </div>
         <div class="form-group">
-            <label for="author">저자</label>
-            <input type="text" id="author" name="author" class="form-control-sm" value="조용준">
+            <label for="author">비밀번호</label>
+            <input type="password" id="pass" name="pass" class="form-control-sm" value="12345">
         </div>
         <div class="form-group">
-            <label for="price">가격</label>
-            <input type="number" id="price" name="price" class="form-control-sm" value="25000">
+            <label for="price">이메일</label>
+            <div id="email" class="custom-control-inline">
+	            <input type="text" id="emailid" name="emailid" class="form-control-sm" value="ssafy" size="25">@
+	            <select class="form-control" id="emaildomain" name="emaildomain">
+	                   <option value="ssafy.com">싸피</option>
+	                   <option value="naver.com">네이버</option>
+	                   <option value="kakao.com">카카오</option>
+	                   <option value="google.com">구글</option>
+	           </select>
+           </div>
         </div>
-    <ul>
-        <li><a href="${root}/regist">도서 등록</a></li>
-        <li><a href="${root}/list">도서 목록</a></li>
-    </ul>
+ 
 </div>
-		<div class="form-group">
-            <label for="img">이미지</label>
-            <input type="file" id="file" name="file" class="form-control-file-sm" accept="image/*">
-        </div>
-        <div class="form-group">
-            <label for="content">설명</label>
-        </div>
-        <div class="form-group">
-            <textarea id="content" name="content" class="form-control" rows="3">좋은 자바 책이다.</textarea>
-        </div>
         <div class="form-group">
             <input type="submit" value="등록">
             <input type="reset" value="취소">
