@@ -14,5 +14,9 @@ public class HappyHouseController {
 	public String aptlist() {
 		return "aptlist";
 	}
+	@GetMapping("/main")
+	public String main() {
+		return "main";
+	}
 
 }

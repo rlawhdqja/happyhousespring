@@ -14,6 +14,7 @@
 	
 	<select id="search" resultType="User">
 		select * from user
+		<!--
 		<if test="key!='none'">
             where ${key} like concat('%',#{word},'%')
         </if>
@@ -23,6 +24,7 @@
         <if test="limit">
             limit #{offset},#{countPerPage}
         </if>
+        -->
 	</select>
 	
 	<update id="update">

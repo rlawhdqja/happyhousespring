@@ -3,6 +3,7 @@
 
 
 <a href="${root}/aptlist">apt list</a><br>
-<a href="${root}/user/regist">회원가입</a>
+<a href="${root}/user/regist">회원가입</a><br>
+<a href="${root}/main">유저 REST</a>
 </body>
 </html>
