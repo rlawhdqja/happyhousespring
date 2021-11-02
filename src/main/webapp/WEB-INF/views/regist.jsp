@@ -15,7 +15,7 @@ textarea {
 </style>
 <div class="container">
     <h1>회원 등록</h1>
-    <form method="post" action="${root}/user/regist" enctype="multipart/form-data">
+    <form method="post" action="${root}/user/regist">
         <!-- front-controller pattern에서 요청을 구분하기 위한 parameter -->
         <div class="form-group">
             <label for="isbn">아이디</label>

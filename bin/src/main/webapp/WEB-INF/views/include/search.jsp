@@ -10,20 +10,20 @@ form>label, form>select, form>input{
 	<label>검색 컬럼:</label>
 	<select name="key" id="key" class="form-control">
 		<option value="none">없음</option>
-		<option value="isbn">아이디</option>
-		<option value="title">이름</option>
-		<option value="author">비밀번호</option>
-		<option value="content">이메일</option>
+		<option value="isbn">ISBN</option>
+		<option value="title">제목</option>
+		<option value="author">저자</option>
+		<option value="content">내용</option>
 	</select>
 	<label>검색어:</label>
 	<input type="text" name="word" id="word" class="form-control">
 	<label>정렬 컬럼:</label>
 	<select name="orderBy" id="orderBy" class="form-control mb-2">
 		<option value="none">없음</option>
-		<option value="isbn">아이디</option>
-		<option value="title">이름</option>
-		<option value="author">비밀번호</option>
-		<option value="price">이메일</option>
+		<option value="isbn">ISBN</option>
+		<option value="title">제목</option>
+		<option value="author">저자</option>
+		<option value="price">가격</option>
 	</select>
 	<label>정렬 방향:</label>
 	<select name="orderByDir" id="orderByDir" class="form-control mb-2">
