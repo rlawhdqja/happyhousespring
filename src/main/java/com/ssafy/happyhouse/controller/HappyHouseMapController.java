@@ -15,14 +15,15 @@ import com.ssafy.happyhouse.model.SidoGugunCodeDto;
 import com.ssafy.happyhouse.model.service.HappyHouseMapService;
 
 @RestController
-@RequestMapping("/aptlist/map")
+@RequestMapping("/map")
 public class HappyHouseMapController {
+	
 	@Autowired
 	private HappyHouseMapService happyHouseMapService;
 	
 	@GetMapping("/sido")
 	public ResponseEntity<List<SidoGugunCodeDto>> sido() throws Exception {
-		System.out.println("hihi");
+		System.out.println("sido");
 		return new ResponseEntity<List<SidoGugunCodeDto>>(happyHouseMapService.getSido(), HttpStatus.OK);
 	}
 

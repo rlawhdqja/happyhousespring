@@ -92,9 +92,10 @@
 				<script type="text/javascript" src="js/map.js"></script>
 				<script type="text/javascript">
 				let colorArr = ['table-primary','table-success','table-danger'];
-				$(document).ready(function(){					
-					$.get(root + "/map/sido"
+				$(document).ready(function(){
+					$.get("${root}/map/sido"
 						,function(data, status){
+							alert( "success" );
 							$.each(data, function(index, vo) {
 								$("#sido").append("<option value='"+vo.sidoCode+"'>"+vo.sidoName+"</option>");
 							});
@@ -103,7 +104,7 @@
 					);
 				});
 				$(document).on("change", "#sido", function() {
-					$.get(root + "/map/gugun"
+					$.get("${root}/map/gugun"
 							,{sido: $("#sido").val()}
 							,function(data, status){
 								$("#gugun").empty();
@@ -116,7 +117,7 @@
 					);
 				});
 				$(document).on("change", "#gugun", function() {
-					$.get(root + "/map/dong"
+					$.get("${root}/map/dong"
 							,{gugun: $("#gugun").val()}
 							,function(data, status){
 								$("#dong").empty();
@@ -129,7 +130,7 @@
 					);
 				});
 				$(document).on("change", "#dong", function() {
-					$.get(root + "/map/apt"
+					$.get("${root}/map/apt"
 							,{dong: $("#dong").val()}
 							,function(data, status){
 								$("tbody").empty();

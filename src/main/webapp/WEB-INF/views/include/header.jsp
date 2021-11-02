@@ -23,7 +23,7 @@
     <div class="text-right">
         <c:if test="${empty userinfo}">
         	
-            <form method="post" action="${root}/login">
+            <form method="post" action="${root}/user/login">
                 <div class="form-group">
                     <input type="text" name="id" placeholder="아이디" value="ssafy">
                     <input type="password" name="pass" placeholder="비밀번호" value="1234">
