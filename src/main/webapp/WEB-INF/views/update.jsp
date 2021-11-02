@@ -4,10 +4,7 @@
 
 <script type="text/javascript">
 $("#registerBtn").click(function () {
-    if (!$("#id").val()) {
-        alert("아이디 입력!!!");
-        return;
-    } else if (!$("#name").val()) {
+	if (!$("#name").val()) {
         alert("이름 확인!!!");
         return;
     } else if (!$("#pass").val()) {
@@ -29,29 +26,29 @@ textarea {
 }
 </style>
 <div class="container">
-    <h1>회원 등록</h1>
+    <h1>회원 정보 수정</h1>
     <form id="userform" method="post" action="${root}/user/regist">
         <!-- front-controller pattern에서 요청을 구분하기 위한 parameter -->
         <div class="form-group">
             <label for="id">아이디</label>
-            <input type="text" id="id" name="id" class="form-control-sm" value="이싸피">
+            <input type="text" id="name" name="name" class="form-control-sm" value="${userinfo.id}" readonly>
         </div>
         <div class="form-group">
             <label for="name">이름</label>
-            <input type="text" id="name" name="name" class="form-control-sm" value="이싸피">
+            <input type="text" id="name" name="name" class="form-control-sm" value="${userinfo.name}">
         </div>
         <div class="form-group">
             <label for="pass">비밀번호</label>
-            <input type="password" id="pass" name="pass" class="form-control-sm" value="12345">
+            <input type="password" id="pass" name="pass" class="form-control-sm" value="${userinfo.pass}">
         </div>
         <div class="form-group">
             <label for="email">이메일</label>
-            <input type="text" id="email" name = "email" class="custom-control-inline">
+            <input type="text" id="email" name = "email" class="custom-control-inline" value="${userinfo.email}">
         </div>
  
 	</div>
         <div class="form-group">
-            <input type="submit" id="registerBtn" value="등록">
+            <input type="submit" id="registerBtn" value="수정">
             <input type="reset" value="취소">
         </div>
     </form>

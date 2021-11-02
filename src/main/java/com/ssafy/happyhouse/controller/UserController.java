@@ -45,12 +45,6 @@ public class UserController {
 	public String regist() {
 		return "regist";
 	}
-	@GetMapping("/delt")
-	public String delt(String id, HttpSession session) throws SQLException {
-		session.invalidate();
-		userService.delete(id);
-		return "redirect:/";
-	}
 	
 	@PostMapping("/regist")
 	public String register(User user, Model model) throws Exception {
@@ -59,8 +53,26 @@ public class UserController {
 		return "redirect:/";
 
 	}
+	@GetMapping("/update")
+	public String update() {
+		return "update";
+	}
+	
+	@PostMapping("/update")
+	public String update(User user, Model model) throws Exception {
+		logger.debug("user info : {}", user);
+		userService.update(user);
+		return "redirect:/";
+		
+	}
 	
 	
+	@GetMapping("/delt")
+	public String delt(String id, HttpSession session) throws SQLException {
+		session.invalidate();
+		userService.delete(id);
+		return "redirect:/";
+	}
 
 	
 	
