@@ -93,7 +93,7 @@
 				<script type="text/javascript">
 				let colorArr = ['table-primary','table-success','table-danger'];
 				$(document).ready(function(){					
-					$.get(root + "/aptlist/sido"
+					$.get(root + "/map/sido"
 						,function(data, status){
 							$.each(data, function(index, vo) {
 								$("#sido").append("<option value='"+vo.sidoCode+"'>"+vo.sidoName+"</option>");

@@ -15,7 +15,7 @@ import com.ssafy.happyhouse.model.SidoGugunCodeDto;
 import com.ssafy.happyhouse.model.service.HappyHouseMapService;
 
 @RestController
-@RequestMapping("/aptlist/map")
+@RequestMapping("/aptlist")
 public class HappyHouseMapController {
 	@Autowired
 	private HappyHouseMapService happyHouseMapService;
