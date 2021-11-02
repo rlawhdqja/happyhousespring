@@ -48,7 +48,7 @@ textarea {
         </div>
         <div class="form-group">
             <label for="email">이메일</label>
-            <div type="text" id="email" class="custom-control-inline">
+            <div type="text"  class="custom-control-inline">
 	            <input id="emailid" name="emailid" class="form-control-sm" value="ssafy" size="25">@
 	            <select class="form-control" id="emaildomain" name="emaildomain">
 	                   <option value="ssafy.com">싸피</option>

@@ -19,7 +19,7 @@
 <body> --%>
 	<div class="container">
 		<header id="index_header" class="jumbotron text-center mb-1">
-			<h4>행복한 우리 집</h4> 
+			<h4>아파트 실거래가 정보</h4> 
 		</header>
 		<!-- nav start -->
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded">
