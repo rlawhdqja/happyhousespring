@@ -94,11 +94,7 @@
 				let colorArr = ['table-primary','table-success','table-danger'];
 				$(document).ready(function(){
 					$.get("${root}/map/sido"
-<<<<<<< HEAD
 						,function(data, status){							
-=======
-						,function(data, status){
->>>>>>> branch 'master' of https://lab.ssafy.com/rlawhd011/happyhousespring.git
 							$.each(data, function(index, vo) {
 								$("#sido").append("<option value='"+vo.sidoCode+"'>"+vo.sidoName+"</option>");
 							});
