@@ -95,7 +95,6 @@
 				$(document).ready(function(){
 					$.get("${root}/map/sido"
 						,function(data, status){
-							alert( "success" );
 							$.each(data, function(index, vo) {
 								$("#sido").append("<option value='"+vo.sidoCode+"'>"+vo.sidoName+"</option>");
 							});
