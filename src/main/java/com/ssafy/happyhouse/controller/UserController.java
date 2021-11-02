@@ -45,12 +45,9 @@ public class UserController {
 	public String register(User user, Model model) throws Exception {
 		logger.debug("user info : {}", user);
 		userService.insert(user);
-<<<<<<< HEAD
-		return "redirect:/list";
-=======
-		return "list";
->>>>>>> branch 'master' of https://lab.ssafy.com/rlawhd011/happyhousespring.git
+		return "redirect:/";
 	}
+	
 	@PostMapping("/login")
 	public String login(User user, HttpSession session, Model m) throws SQLException {
 		User selected = userService.select(user.getId());
