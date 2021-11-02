@@ -10,7 +10,7 @@ import com.ssafy.happyhouse.model.User;
 public interface UserService {
 	User select(String id) throws SQLException;
 	int insert(User u) throws SQLException;
-	List<User> search() throws SQLException;
+	//List<User> search() throws SQLException;
 	int delete(String id) throws SQLException;
 	int update(User u) throws SQLException;
 	List<User> search(SearchCondition condition);
