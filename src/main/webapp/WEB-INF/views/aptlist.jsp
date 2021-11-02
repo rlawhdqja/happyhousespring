@@ -92,13 +92,8 @@
 				<script type="text/javascript" src="js/map.js"></script>
 				<script type="text/javascript">
 				let colorArr = ['table-primary','table-success','table-danger'];
-<<<<<<< HEAD
-				$(document).ready(function(){					
-					$.get(root + "/aptlist/sido"
-=======
 				$(document).ready(function(){
 					$.get("${root}/map/sido"
->>>>>>> branch 'master' of https://lab.ssafy.com/rlawhd011/happyhousespring.git
 						,function(data, status){
 							alert( "success" );
 							$.each(data, function(index, vo) {
