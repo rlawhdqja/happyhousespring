@@ -1,6 +1,7 @@
 package com.ssafy.happyhouse.model.service;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.ssafy.happyhouse.model.SearchCondition;
 import com.ssafy.happyhouse.model.User;
 import com.ssafy.happyhouse.model.mapper.UserMapper;
+import com.ssafy.happyhouse.util.PageNavigation;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -20,9 +22,18 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	ResourceLoader loader;
 	
+	
+	public UserMapper getMapper() {
+		return mapper;
+	}
+
+	public void setMapper(UserMapper mapper) {
+		this.mapper = mapper;
+	}
+
 	@Override
 	public User select(String id) throws SQLException {
-		return null;
+		return mapper.select(id);
 	}
 
 	@Override
@@ -31,20 +42,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> search() throws SQLException {
-		return null;
-	}
-
-
-
-	@Override
 	public int delete(String id) throws SQLException {
-		return 0;
+		return mapper.delete(id);
 	}
 
 	@Override
 	public int update(User u) throws SQLException {
-		return 0;
+		return mapper.update(u);
 	}
 
 	@Override
