@@ -18,7 +18,6 @@ import com.ssafy.happyhouse.model.SearchCondition;
 import com.ssafy.happyhouse.model.User;
 import com.ssafy.happyhouse.model.service.UserService;
 
-
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -34,7 +33,6 @@ public class UserController {
     }
 	@GetMapping("/")
 	public String index() {
-		
 		return "index";
 	}
 	
@@ -48,6 +46,8 @@ public class UserController {
 		logger.debug("user info : {}", user);
 		userService.insert(user);
 		return "redirect:/";
+
+
 	}
 	@PostMapping("/login")
 	public String login(User user, HttpSession session, Model m) throws SQLException {
