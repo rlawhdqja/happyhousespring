@@ -46,10 +46,22 @@ textarea {
         </div>
         <div class="form-group">
             <label for="email">이메일</label>
+
             <input type="text" id="email" name = "email" class="custom-control-inline">
+
+            <div type="text"  class="custom-control-inline">
+	            <input id="emailid" name="emailid" class="form-control-sm" value="ssafy" size="25">@
+	            <select class="form-control" id="emaildomain" name="emaildomain">
+	                   <option value="ssafy.com">싸피</option>
+	                   <option value="naver.com">네이버</option>
+	                   <option value="kakao.com">카카오</option>
+	                   <option value="google.com">구글</option>
+	           </select>
+           	</div>
+
         </div>
  
-</div>
+	</div>
         <div class="form-group">
             <input type="submit" id="registerBtn" value="등록">
             <input type="reset" value="취소">
